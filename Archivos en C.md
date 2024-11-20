@@ -19,13 +19,13 @@ fclose(FILE ftpr);
 - ```int fprintf(FILE* fp, char* formato, ...);```      printf en archivos
 
 #### Escribir en binario
-- ```int fwrite (void* p, int tam, int nelem, FILE* fp);``` 
+- ```int fwrite (void* p, int tam, int nelem, FILE* fp);``` \n
 	p -> os elementos (array normalmente) a escribir
 	tam -> tamaño en bytes de cada elemento
 	nelem -> numero elementos
 	fp -> FILE ao que se vai escribir
 #### Leer en binario
-- ```int fread (void* p, int tam, int nelem, FILE* fp);``` 
+- ```int fread (void* p, int tam, int nelem, FILE* fp);``` \n
 	p -> os elementos (array normalmente) a leer
 	tam -> tamaño en bytes de cada elemento
 	nelem -> numero elementos
