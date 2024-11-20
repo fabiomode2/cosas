@@ -13,7 +13,7 @@ if (nombre == NULL) {printf("error");}
 
 fclose(FILE ftpr);
 #### Para leer
-- ```int fscanf (FILE* fp, char* formato, ...);```  scanf pero en archivos, avanza o cursos ata o seguinte dato
+- ```int fscanf (FILE* fp, char* formato, ...);```  scanf pero en archivos, avanza o cursor ata o seguinte dato
 - ```char* fgets (char* s, int n, FILE* fp);```     colle todos os caracteres ata ocupar os n bytes e gardaos en s
 - ```char* sscanf (char* s, int n, FILE* fp);```     scanf pero nunha string en vez de nun archivo
 #### Para escribir
