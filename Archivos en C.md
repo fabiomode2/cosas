@@ -22,13 +22,21 @@ fclose(FILE ftpr);
 - ```int fwrite (void* p, int tam, int nelem, FILE* fp);```
   
 	p -> os elementos (array normalmente) a escribir
+
 	tam -> tamaño en bytes de cada elemento
+
 	nelem -> numero elementos
+
 	fp -> FILE ao que se vai escribir
+
 #### Leer en binario
 - ```int fread (void* p, int tam, int nelem, FILE* fp);```
   
 	p -> os elementos (array normalmente) a leer
+
 	tam -> tamaño en bytes de cada elemento
+
 	nelem -> numero elementos
+
 	fp -> FILE ao que se vai leer
+
