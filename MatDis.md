@@ -80,3 +80,58 @@ $L(n) = (p_0 + p_1 n + ... + p_t n^t)s^n$ donde $s, p_i$ son constantes.
 - Si $s$ es raíz de la ec. car.
   	$a_n ^{(p)} = (\beta_0 + \beta_1 n + ... + \beta_t n^t)s^n n^m$ siendo $m$ la multiplicidad de la raíz $s$.
 
+Ej.:
+
+$a_n = a_{n-2} + n3^n$    3 no es raíz de la ec. car.  $x^2 - 1$
+
+$L(n) = (0 + 1n)3^n$
+
+$a_n^{(p)} = (\beta_0 + \beta_1 n )3^n$ 
+
+Sustituyendo $a_n^{(p)}$ en la ec.:
+
+	$(\beta_0 + \beta_1 n)3^n = (\beta_0 + \beta_1 (n-2) )3^{n-2} + n3^n$ 
+ 
+	$\beta_0 3^n + \beta_1 n 3^n = \beta_0 3^{n-2} + \beta_1 n3^{n-2} - 2\beta_1 3^{n-2} + n3^n$
+ 
+	Dividimos todo por $3^{n-2}$
+ 
+	$\beta_0 3^2 + \beta_1 n 3^2 = \beta_0 + \beta_1 n - 2\beta_1 + n3^2$
+ 
+	$9\beta_0 + 9\beta_1 n = \beta_0 + \beta_1 n - 2\beta_1 + 9n$ 
+ 
+	$9\beta_0 + 9\beta_1 n = (\beta_0 - 2\beta_1) + (9 + \beta_1)n$
+ 
+- $9\beta_0 = \beta_0 - 2\beta_1 \rightarrow \beta_0 = -\frac{9}{32}$
+- $9\beta_1 n = (9 + \beta_1 )n \rightarrow \beta_1 = \frac{9}{8}$
+
+La solución será:
+
+$a_n = \alpha 1^n + \beta (-1)^n + (-\frac{9}{32} + \frac{9}{8}n)3^n$
+
+#### RRLnHCC
+
+$a_n = a_{n-1} + n$ RRLnHCC de orden 1.
+
+$a_n = a_n^{(h)} + a_n^{(p)}$
+
+ec. car. :  $r-1$, $r_1 = 1 \rightarrow a_n^{(h)} = \alpha 1^n = alpha$
+
+$n = (0 + 1n)1^n$
+
+$a_n^{(p)} = (\beta_0 + \beta_1 n)1^n n^m$ siendo m la multiplicidad de la raíz 1, que es 1.
+
+$a_n^{(p)} = (\beta_0 + \beta_1 n)n$
+
+	$(\beta_0 + \beta_1 n )n = (\beta_0 + \beta_1 (n-1) )(n-1) + n$
+ 
+	$\beta_0 n + \beta_1 n^2 = (\beta_0 + \beta_1 n - \beta_1)(n - 1) + n$
+ 
+	$\beta_0 n + \beta_1 n^2 = \beta_0 n + \beta_1 n^2 -\beta_1 n -\beta_0 -\beta_1 n + \beta_1 + n$
+ 
+	$\beta_0 n + \beta_1 n^2 = \beta_1 n^2 + n(\beta_ 0 - 2\beta_1 + 1) + (\beta_1 - \beta_0)$
+ 
+- $\beta_0 = \beta_0 -2\beta_ 1 + 1 \rightarrow \beta_1 = \frac{1}{2}$
+- $0 = \beta_1 - \beta_0 \rightarrow \beta_1 = \beta_0 = \frac{1}{2}$
+- 
+$a_n = a_n^{(h)} + a_n^{(p)} = \alpha + \frac{(1 + n)n}{2}$
