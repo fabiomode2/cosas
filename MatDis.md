@@ -32,7 +32,7 @@ $r_1 = 2$ multiplicidad 3 (triple)
 $r_2 = 1$ multiplicidad 2 (doble)
 $r_3 = -3$ multiplicidad 1 (simple)
 Siendo $r_i, i=1..s$ las raíces y $m_i, i=1..s$ su multiplicidad, la solución es:
-$$ a_n = (\alpha_{10} + \alpha_11 n + ... + \alpha_{1,m_{1-1}}n^{m_1 - 1})r_1^n + (\alpha_{20} + \alpha_{21}n + ... + \alpha_{2, m_{2 - 1}} n^{m_{2 - 1}})r_2^n + ... + (\alpha_{s0} + \alpha_{s1}n + ... + \alpha_{s, m_{s - 1}}n^{m_{s - 1}}) r_s^n$$
+$a_n = (\alpha_{10} + \alpha_11 n + ... + \alpha_{1,m_{1-1}}n^{m_1 - 1})r_1^n + (\alpha_{20} + \alpha_{21}n + ... + \alpha_{2, m_{2 - 1}} n^{m_{2 - 1}})r_2^n + ... + (\alpha_{s0} + \alpha_{s1}n + ... + \alpha_{s, m_{s - 1}}n^{m_{s - 1}}) r_s^n$
 Ej.: $a_n = 4a_{n - 1} - 4a_{n-2}$ , $a_0 = 2, a_1 = 8$ || $r^2 - 4r + 4 = 0$ || $(r-2)^2$ || $r_1 = 2, m_1 = 2$ 
 $a_n = (\alpha_{1,0} + \alpha_{1,1}n)2^n$  
 $a_0 = (\alpha_{10} + \alpha_{11}0)2^0$ = 2 => $\alpha_{10} = 2$
