@@ -75,10 +75,8 @@ Si $a_n^{(p)}$ es una solución particular de RRLnHCC y $a_n^{(h)}$ cualquier so
 $L(n) = (p_0 + p_1 n + ... + p_t n^t)s^n$ donde $s, p_i$ son constantes.
 
 - Si $s$ no es raíz de la ecuación característica.
-- 
-	$a_n ^{(p)} = (\beta_0 + \beta_1 n + ... + \beta_t n^t)s^n$ donde $\beta_i$ son constantes que hay que calcular.
+  	$a_n ^{(p)} = (\beta_0 + \beta_1 n + ... + \beta_t n^t)s^n$ donde $\beta_i$ son constantes que hay que calcular.
 
 - Si $s$ es raíz de la ec. car.
-- 
-	$a_n ^{(p)} = (\beta_0 + \beta_1 n + ... + \beta_t n^t)s^n n^m$ siendo $m$ la multiplicidad de la raíz $s$.
+  	$a_n ^{(p)} = (\beta_0 + \beta_1 n + ... + \beta_t n^t)s^n n^m$ siendo $m$ la multiplicidad de la raíz $s$.
 
