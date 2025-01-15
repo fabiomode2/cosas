@@ -89,17 +89,11 @@ $L(n) = (0 + 1n)3^n$
 $a_n^{(p)} = (\beta_0 + \beta_1 n )3^n$ 
 
 Sustituyendo $a_n^{(p)}$ en la ec.:
-
 	$(\beta_0 + \beta_1 n)3^n = (\beta_0 + \beta_1 (n-2) )3^{n-2} + n3^n$ 
- 
 	$\beta_0 3^n + \beta_1 n 3^n = \beta_0 3^{n-2} + \beta_1 n3^{n-2} - 2\beta_1 3^{n-2} + n3^n$
- 
 	Dividimos todo por $3^{n-2}$
- 
 	$\beta_0 3^2 + \beta_1 n 3^2 = \beta_0 + \beta_1 n - 2\beta_1 + n3^2$
- 
 	$9\beta_0 + 9\beta_1 n = \beta_0 + \beta_1 n - 2\beta_1 + 9n$ 
- 
 	$9\beta_0 + 9\beta_1 n = (\beta_0 - 2\beta_1) + (9 + \beta_1)n$
  
 - $9\beta_0 = \beta_0 - 2\beta_1 \rightarrow \beta_0 = -\frac{9}{32}$
@@ -122,13 +116,9 @@ $n = (0 + 1n)1^n$
 $a_n^{(p)} = (\beta_0 + \beta_1 n)1^n n^m$ siendo m la multiplicidad de la raíz 1, que es 1.
 
 $a_n^{(p)} = (\beta_0 + \beta_1 n)n$
-
 	$(\beta_0 + \beta_1 n )n = (\beta_0 + \beta_1 (n-1) )(n-1) + n$
- 
 	$\beta_0 n + \beta_1 n^2 = (\beta_0 + \beta_1 n - \beta_1)(n - 1) + n$
- 
 	$\beta_0 n + \beta_1 n^2 = \beta_0 n + \beta_1 n^2 -\beta_1 n -\beta_0 -\beta_1 n + \beta_1 + n$
- 
 	$\beta_0 n + \beta_1 n^2 = \beta_1 n^2 + n(\beta_ 0 - 2\beta_1 + 1) + (\beta_1 - \beta_0)$
  
 - $\beta_0 = \beta_0 -2\beta_ 1 + 1 \rightarrow \beta_1 = \frac{1}{2}$
