@@ -135,3 +135,53 @@ $\beta_0 n + \beta_1 n^2 = \beta_1 n^2 + n(\beta_ 0 - 2\beta_1 + 1) + (\beta_1 -
 - $0 = \beta_1 - \beta_0 \rightarrow \beta_1 = \beta_0 = \frac{1}{2}$
 
 $a_n = a_n^{(h)} + a_n^{(p)} = \alpha + \frac{(1 + n)n}{2}$
+
+# Grafos
+
+Un grafo es un par $G=(V, E)$. $V$ es un conjunto finito no vacío de vértices y $E$ de ejes.
+- Orden de un grafo: $|V|$, tamaño: $|E|$ 
+- Un par de vértices son adyacentes si los une un ejes.
+- Un vértice aislado no está conectado a nada
+- Un par de v. conectados por más de 1 e. tiene ejes paralelos
+- Un e. que tiene como extremos el mismo v. es un lazo
+- Un grafo sin e. paralelos ni lazos es un grafo simple
+- El grado de un vértice $\delta(v)$ es el nº de e. incidentes. **Lazos cuentan por dos**.
+- Sucesión de grados de un grafo:
+	$(v_1, v_2, v_3, v_4, v_5)$
+	$(0, 3, 1, 2, 4)$
+- **Lema del apretón de manos**: $\sum_{i=1}^{|V|} \delta(v_i) = 2|E|$
+- Un grafo completo es el que cada v. está conectado a los demás. $K_n$ siendo $n$ el nº de v. Orden de $K_n$ es $n$, tamaño es $\binom{n}{2}$
+- Ciclos $C_n$. $|C_n| = n$
+- Dos grafos son **isomorfos** si existen aplicaciones biyectivas que relacionen sus ejes y vértices. Son invariantes el orden, tamaño y sucesión de grados.
+- Tabla de adyacencia:
+
+| $v_1$ | $v_2, v_3$ |
+| ----- | ---------- |
+| $v_2$ | $v_1$      |
+| $v_3$ | $v_1$      |
+- **Matriz de adyacencia**. Es una matriz $nxn$ siendo $n$ el grado del grafo en la cual la entrada $a_{ij}$ es el nº de ejes que conectan $v_i$ con $v_j$. Para un grafo simple, la matriz es binaria y la diagonal son $0s$.
+- **Matriz de incidencia**. Es una matriz $B \in \mathbb{M}_{n \times m}, n=|V|, m=|E|$. La entrada $b_{ij}$ es:
+$$\begin{cases}
+0 \text{ si $v_1$ es incidente en el eje $j$} \\
+1 \text{ si $v_1$ no es incidente en el eje $j$} \\
+\end{cases}$$
+- Un camino de longitud $\geq 1$ donde los extremos coinciden es un ciclo.
+- Un camino en el que todos los e. son distintos se llama simple.
+- El número de caminos de longitud $K$ entre $v_i$ y $v_j$ es la entrada $a_{ij}$ de la matriz de adya. $A^K$
+- Se dice que dos v. están conectados si existe un camino que los une.
+- Un grafo se dice conexo cuando todos los v. están conectados.
+- Un grafo es conexo $\Leftrightarrow$ todas las entradas no diagonales de $A + A^2 \cdots A^{n-1}$ son no nulas.
+- **Un circuito euleriano es un camino simple cerrado que contiene a todos los e. del grafo.**
+- Un grafo se dice Euleriano si tiene un circuito euleriano.
+- Un grafo se dice semi-euleriano si tiene un camino euleriano: un camino simple no cerrado que contiene todos los e. del grafo.
+- **Un grafo es Euleriano si todos los v. tienen grado PAR**
+- **Un grafo es semi-euleriano si todos lo v. tienen grado PAR menos exactamente 2**
+- **Algoritmo de Fleury** para encontrar un camino euleriano. 
+	- Cada eje se elimina una vez pasado por él.
+	- Solo se selecciona un eje puente cuando es la única opción.
+- Un camino se dice **Hamiltoniano** si es un camino simple que contiene a todos los v. solo una vez. Si es cerrado, se dice ciclo Hamiltoniano.
+- Un grafo se dice Hamiltoniano si tiene un ciclo hamilt. y semi-hamiltoniano si tiene un camino hamilt.
+- **Teorema de Dirac**. Sea $G$ un grafo simple y conexo con $n$ v. Si $\delta(v) \geq \frac{n}{2}$ para todos los v. entonces es hamiltoniano.
+- **Teorema de Ore**. Sea $G$ un grafo simple y conexo con $n$ v., $n \geq 3$. Si $\delta(v) + \delta(w) \geq n$ para cualquier para de v. **no adyacentes**, entonces es hamiltoniano.
+- **Teorema (condición necesaria)** si $G = (V, E)$ es Hamiltoniano, entonces para cada conjunto $U, U \subset V$, el grafo $G - U$ tiene, a lo sumo, $|U|$ componentes conexas.  
+- El número de ejes de un grafo simple es igual a $\binom{n}{2}$ siendo $n = |V|$.
