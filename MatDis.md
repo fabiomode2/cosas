@@ -185,3 +185,35 @@ Un grafo es un par $G=(V, E)$. $V$ es un conjunto finito no vacío de vértices 
 - **Teorema de Ore**. Sea $G$ un grafo simple y conexo con $n$ v., $n \geq 3$. Si $\delta(v) + \delta(w) \geq n$ para cualquier para de v. **no adyacentes**, entonces es hamiltoniano.
 - **Teorema (condición necesaria)** si $G = (V, E)$ es Hamiltoniano, entonces para cada conjunto $U, U \subset V$, el grafo $G - U$ tiene, a lo sumo, $|U|$ componentes conexas.  
 - El número de ejes de un grafo simple es igual a $\binom{n}{2}$ siendo $n = |V|$.
+- Un grafo bipartito es en el los v. se pueden separa en dos conjuntos disjuntos de manera que los e. no relacionan los v. de un mismo grupo.
+- Un grafo bipartito se dice completo si todos los v. de $V_1$ son adyacentes con los de $V_2$
+- **Teorema** un grafo es **bipartito** $\leftrightarrow$ todos sus ciclos son de longitud **par**.
+- **Algoritmo para encontrar la partición de un grafo bipartito**:
+	- Sea $v$ un v. cualquiera de $V$:$$\begin{cases}
+V_1 = \{ w \in V \space \space | \space \space d(v, w)\text{ es IMPAR} \} \\
+V_2 = \{ u \in V \space \space | \space \space d(v, w)\text{ es PAR} \} \\
+\end{cases}$$
+- Un grafo se dice **plano** si puede dibujarse en el plano, de tal manera que no se corten los ejes.
+- **Teorema Kuratowski** sea $G$ un grafo simple y conexo es plano $\leftrightarrow$ no contiene ningún subgrafo isomorfo por subdivisiones elementas de $K_{3,3}$ o $K_5$.
+- **Forma de Euler**: en un grafo plano, $C + V = E + 2$.
+	- Si $|V|\geq3$, entonces $|E| \leq 3 |V| - 6$
+	- $G$ tiene un v. menor o igual que 5
+	- Si $|V|\geq3$ y no $G$ no contiene circuitos de longitud $3$, entonces $|E| \leq 2|V| - 4$
+- El grado de una cara es el numero de e. fronterizos. 
+- La suma de los grados de las caras es $= 2|E|$
+- Un **árbol** es un grafo conexo y sin circuitos.
+- Para $G = (V, E)$, son equivalentes:
+	- $G$ es un árbol.
+	- Cada par de v. está conectado por un único camino.
+	- $G$ es conexo y todo e. es un puente.
+	- $G$ es conexo y $|V| = |E + 1|$.
+	- $G$ no tiene circuitos y $|V| = |E + 1|$.
+- Sea $G = (V, E)$ un grafo conexo, el **árbol generador** de $G$ es un subgrafo que es un árbol y contiene a todos los v.
+- **Algoritmo de Kruskal**, encontrar árbol generador minimal. 
+	- Se pone un contador $i = 1$ y se selecciona un e. $e_1$.
+	- Se toda el e. $e_{i + 1}$ de peso mínimo entre los e. que quedan y que no formen un circuito con los anteriores.
+	- Se repite el paso anterior hasta que no queden e. por seleccionar.
+- **Algoritmo de Prim**:
+	- Se elige un v. cualquiera y $T_o = {v_1}$ es el primer árbol.
+	- Se escoge otro el siguiente $v$ que sea adyacente a los que ya hay en el árbol que no forme un circuito que tenga el peso mínimo.
+	- Se repite el paso anterior hasta que no sea posible añadir más v.
