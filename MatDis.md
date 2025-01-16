@@ -1,3 +1,50 @@
+# Aritmética modular
+
+### Función de Euler
+
+$\phi(p^k) = p^{k-1} (p - 1)$ Número de unidades en $\mathbb{Z}/p^k\mathbb{Z}$
+
+#### Congruencias Lineales
+
+$ax \equiv b \pmod{m}$
+- Si $gdc(a, m) \mid b \rightarrow$  no tiene solución
+- Si $gdc(a, m) \mid b \rightarrow$ tiene $gdc(a, m) = d$ soluciones
+
+Se resuelve:
+
+$x_0 = \frac{a}{d}x \equiv \frac{b}{d} \pmod{\frac{m}{d}}$ tiene solución única
+
+Las otras d soluciones se obtienen de la forma: $x_0 + k\frac{m}{d}, k=0,1..d-1$
+
+### Teorema Chino de los Restos
+
+Sean $m_1, m_2, ..., m_k$ primos relativos y $a_1, a_2, ..., a_k$ enteros cualesquiera:
+$$
+\begin{cases}
+x \equiv a_1 \pmod{m1} \\
+x \equiv a_2 \pmod{m2} \\
+\vdots \\
+x \equiv a_k \pmod{mk} \\
+\end{cases}
+$$
+Tiene solución única en módulo $m = m1 m2 \cdots mk$, que es:
+$x = a_1 \frac{m}{m_1}\left[\frac{m}{m_1}\right]^{-1}_{m_1} + a_2 \frac{m}{m_2}\left[\frac{m}{m_2}\right]^{-1}_{m_2} + \cdots + a_k \frac{m}{m_k}\left[\frac{m}{m_k}\right]^{-1}_{m_k}$
+
+
+### RSA
+
+Queremos encriptar un mensaje $m$ con una clave pública y una privada para el emisor y receptor.
+Entonces lo elevamos a un número $e$ con inverso multiplicativo$\pmod{\phi(n)}$, siendo $n = p q$ siendo $p$ y $q$ dos números primos cualesquiera. 
+$m^e \pmod{n}$
+La clave pública será ($e$, $n$) y la privada ($d$). Para desencriptar habría que realizar la operación: $(m^e)^d \pmod{n}$ siendo $d$ el inverso multiplicativo de $e \pmod{\phi(n)}$. Esto funciona pues se conoce $n$ pero no $p$ y $q$, por lo que el cálculo de $\phi(n)$ es muy difícil. Estos nos devolvería el mensaje original debido al Teorema de Euler:
+
+> **Si $a$ y $n$ son enteros primos relativos, entonces $a^{\varphi(n)} \equiv 1 \pmod{n}$.**
+> — [*Leonhard Euler (1736)*](https://es.wikipedia.org/wiki/Teorema_de_Euler)
+
+### Principio del Palomar
+Si tenemos $n$ palomas y $k$ nidos, habrá, al menos, $\lceil {\frac{n}{k}} \rceil$ palomas en $1$ nido. 
+
+
 #### Principio inclusión-exclusión
 $$ |A \cup B| = |A| + |B| - |A \cap B|$$
 # Combinatoria
