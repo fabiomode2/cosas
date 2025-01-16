@@ -208,7 +208,8 @@ Un grafo es un par $G=(V, E)$. $V$ es un conjunto finito no vacío de vértices 
 | $v_3$ | $v_1$      |
 - **Matriz de adyacencia**. Es una matriz $nxn$ siendo $n$ el grado del grafo en la cual la entrada $a_{ij}$ es el nº de ejes que conectan $v_i$ con $v_j$. Para un grafo simple, la matriz es binaria y la diagonal son $0s$.
 - **Matriz de incidencia**. Es una matriz $B \in \mathbb{M}_{n \times m}, n=|V|, m=|E|$. La entrada $b_{ij}$ es:
-  $\begin{cases}
+
+$\begin{cases}
 0 \text{ si $v_1$ es incidente en el eje $j$} \\
 1 \text{ si $v_1$ no es incidente en el eje $j$} \\
 \end{cases}$
